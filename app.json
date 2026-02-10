@@ -23,9 +23,11 @@
       "package": "com.rencii.test"
     },
     "web": {
-      "output": "single",
-      "favicon": "./assets/images/favicon.png"
-    },
+       "bundler": "metro",
+        "output": "single",
+        "favicon": "./assets/images/favicon.png",
+        "baseUrl": "."
+      },
     "plugins": [
       "expo-router",
       [
@@ -43,7 +45,10 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": true,
+      "router": {
+        "static": false
+      }
     },
     "extra": {
       "router": {},
